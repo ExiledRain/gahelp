@@ -10,9 +10,4 @@ public class MainController {
     public String getStat(){
         return "welcome";
     }
-
-    @RequestMapping("/wel")
-    public String getWel(){
-        return "wel";
-    }
 }
