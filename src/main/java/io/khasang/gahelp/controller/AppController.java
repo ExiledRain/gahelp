@@ -16,8 +16,18 @@ public class AppController {
         return "horse";
     }
 
+    @RequestMapping("/testing")
+    public String getStat() {
+        return "testing";
+    }
+
     @RequestMapping("/user")
     public String getUserPage() {
         return "user";
+    }
+
+    @RequestMapping("/alps")
+    public String getAlp() {
+        return "alps";
     }
 }
