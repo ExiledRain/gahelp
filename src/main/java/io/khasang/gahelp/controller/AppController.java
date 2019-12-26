@@ -26,8 +26,13 @@ public class AppController {
         return "user";
     }
 
-    @RequestMapping("/alps")
+    @RequestMapping("/alp")
     public String getAlp() {
         return "alps";
+    }
+
+    @RequestMapping("/dent")
+    public String getDent() {
+        return "dent";
     }
 }
