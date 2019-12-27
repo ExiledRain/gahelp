@@ -16,6 +16,11 @@ public class AppController {
         return "horse";
     }
 
+    @RequestMapping("/monstermenu")
+    public String getMonsterMenu() {
+        return "monster";
+    }
+
     @RequestMapping("/testing")
     public String getStat() {
         return "testing";
@@ -24,15 +29,5 @@ public class AppController {
     @RequestMapping("/user")
     public String getUserPage() {
         return "user";
-    }
-
-    @RequestMapping("/alp")
-    public String getAlp() {
-        return "alps";
-    }
-
-    @RequestMapping("/dent")
-    public String getDent() {
-        return "dent";
     }
 }

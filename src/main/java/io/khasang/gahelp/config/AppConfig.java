@@ -3,7 +3,6 @@ package io.khasang.gahelp.config;
 import io.khasang.gahelp.dao.*;
 import io.khasang.gahelp.dao.impl.*;
 import io.khasang.gahelp.entity.*;
-import io.khasang.gahelp.model.Cat;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -11,10 +10,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Configuration
 @EnableAspectJAutoProxy
 public class AppConfig {
-    @Bean
-    public Cat cat() {
-        return new Cat("Yukki");
-    }
 
     @Bean
     public HorseDao horseDao() {
@@ -34,11 +29,6 @@ public class AppConfig {
     @Bean
     public CharactersDao charactersDao() {
         return new CharactersDaoImpl(Characters.class);
-    }
-
-    @Bean
-    public RoleDao roleDao() {
-        return new RoleDaoImpl(Role.class);
     }
 
     @Bean

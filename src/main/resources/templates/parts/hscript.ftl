@@ -1,12 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="main_style.css" type="text/css"/>
-</head>
-
 <script>
     var service = 'http://localhost:8080/horse'
 
@@ -96,59 +87,3 @@
     };
 
 </script>
-
-<body>
-<h1>Horse API</h1>
-
-<table class="table">
-    <tr>
-        <th>Request type</th>
-        <th>URL</th>
-        <th>Value</th>
-    </tr>
-    <tr>
-        <td>Get all horses - <code><strong>GET</strong></code></td>
-        <td>/horse/all</td>
-        <td>
-            <button type="button" onclick="RestGetAll()">try</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Get horse by id - <code><strong>GET</strong></code></td>
-        <td>/horse/get/{id}</td>
-        <td>
-            id: <input id="getHorseByID" value="1"/>
-            <button type="button" onclick="RestGet($('#getHorseByID').val())">try</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Add new horse - <code><strong>POST</strong></code></td>
-        <td>/horse/add</td>
-        <td>
-            name: <input id="horseName" value="Risak"/>
-            description: <input id="horseDescription" value="fast"/>
-            <button type="button" onclick="RestPost($('#horseName').val(), $('#horseDescription').val())">try</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Update horse - <code><strong>PUT</strong></code></td>
-        <td>/horse/update</td>
-        <td>
-            id: <input id="horseID" value=1>
-            name: <input id="horseNameForUpdate" value="Risak"/>
-            description: <input id="horseDescriptionForUpdate" value="fast"/>
-            <button type="button" onclick="RestPut($('#horseID').val(), $('#horseNameForUpdate').val(),
-             $('#horseDescriptionForUpdate').val())">try</button>
-        </td>
-    </tr>
-</table>
-
-<div class="panel panel-default">
-    <div class="page-heading">
-        <strong>RESPONSE</strong>
-    </div>
-    <div class="panel-body" id="response"></div>
-</div>
-
-</body>
-</html>

@@ -18,11 +18,9 @@ import java.util.Properties;
 @EnableTransactionManagement
 @PropertySource(value = "classpath:hibernate.properties")
 public class HibernateConfig {
-
     private Environment environment;
     private DataSource dataSource;
 
-    // singleton
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
