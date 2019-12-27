@@ -2,8 +2,8 @@
 
 This is *Game Helping* service.(GaHelp shortly)
 
-This service was created to help people to set up an environment for board games.It was inspired by famous board game called :
-"Dungeon & Dragons" that brings a lot of fun in our world.But as an regular board game you had to deal with paper, cards, pencils and whatever the forces you to use.This service comes handy when you need to create your character and keep track of the progrss for entire game, but this time it will be digital.
+This service was created to help people to set up an environment for board games. It was inspired by famous board game called :
+"Dungeon & Dragons" that brings a lot of fun in our world. But as an regular board game you had to deal with paper, cards, pencils and whatever it forces you to use. This service comes handy when you need to create your character and keep track of the progress for entire game, but this time it will be digital.
 Now, when you want to play board game next time, make sure to use GaHelp to increase you gaming experience.
 
 ## How to use the service: 
@@ -11,11 +11,16 @@ Now, when you want to play board game next time, make sure to use GaHelp to incr
   * . As *player* you are able to create player and keep track of your progress during the game.
   
 - * . Login as *keeper* to manage the monsters
+  * . use *keeper* as login and password
   * . As *keeper* you are able create and manage monster for players to compete with.
   
-  ### Implemented techonologies:
+  ### Used in development:
 * Rest Api
 * Hibernate ORM
+* Freemarker
+* Gradle
 * PostgreSQL
 * SpringFramework
+* Spring Boot
+* Spring Security
 * Spring JDBC
