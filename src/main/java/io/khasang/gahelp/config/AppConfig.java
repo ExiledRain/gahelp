@@ -1,23 +1,8 @@
 package io.khasang.gahelp.config;
 
-import io.khasang.gahelp.dao.EmployeeDao;
-import io.khasang.gahelp.dao.HorseDao;
-import io.khasang.gahelp.dao.PhysicalSkillDao;
-import io.khasang.gahelp.dao.UserDao;
-import io.khasang.gahelp.dao.impl.PhysicalSkillDaoImpl;
-import io.khasang.gahelp.dao.impl.UserDaoImpl;
-import io.khasang.gahelp.dao.LogSheetDao;
-import io.khasang.gahelp.dao.impl.HorseDaoImpl;
-import io.khasang.gahelp.dao.impl.LogSheetDaoImpl;
-import io.khasang.gahelp.entity.Horse;
-import io.khasang.gahelp.entity.LogSheet;
-import io.khasang.gahelp.dao.MonsterDao;
-import io.khasang.gahelp.dao.impl.EmployeeDaoImpl;
-import io.khasang.gahelp.dao.impl.MonsterDaoImpl;
-import io.khasang.gahelp.entity.Employee;
-import io.khasang.gahelp.entity.Monster;
-import io.khasang.gahelp.entity.PhysicalSkill;
-import io.khasang.gahelp.entity.User;
+import io.khasang.gahelp.dao.*;
+import io.khasang.gahelp.dao.impl.*;
+import io.khasang.gahelp.entity.*;
 import io.khasang.gahelp.model.Cat;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +12,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class AppConfig {
     @Bean
-    public Cat cat(){
+    public Cat cat() {
         return new Cat("Yukki");
     }
 
@@ -37,20 +22,30 @@ public class AppConfig {
     }
 
     @Bean
-    public UserDao userDao(){
+    public UserDao userDao() {
         return new UserDaoImpl(User.class);
     }
 
     @Bean
-    public PhysicalSkillDao physicalSkillDao(){
+    public PhysicalSkillDao physicalSkillDao() {
         return new PhysicalSkillDaoImpl(PhysicalSkill.class);
     }
 
     @Bean
+    public CharactersDao charactersDao() {
+        return new CharactersDaoImpl(Characters.class);
+    }
 
+    @Bean
+    public RoleDao roleDao() {
+        return new RoleDaoImpl(Role.class);
+    }
+
+    @Bean
     public LogSheetDao logSheetDao() {
         return new LogSheetDaoImpl(LogSheet.class);
-  
+    }
+
     @Bean
     public MonsterDao monsterDao() {
         return new MonsterDaoImpl(Monster.class);

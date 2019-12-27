@@ -30,7 +30,6 @@ public class HorseController {
         return horseService.update(horse);
     }
 
-//    @Secured(value = "ROLE_ADMIN")
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ResponseBody
     public Horse getHorseById(@PathVariable("id") long id) {
