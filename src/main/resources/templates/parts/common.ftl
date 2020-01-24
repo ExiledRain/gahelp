@@ -18,98 +18,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
                 integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
                 crossorigin="anonymous"></script>
+        <#-- Vue + vue resources -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
         <link rel="stylesheet" href="../main_style.css" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     </head>
-    <script>
-        var service = 'http://localhost:8080/${service}'
-
-        var RestGetAll = function () {
-            $.ajax({
-                type: 'GET',
-                url: service + '/all',
-                dataType: 'json',
-                accept: 'json',
-                contentType: 'application/json;utf-8',
-                async: false,
-                success: function (result) {
-                    $('#response').html(JSON.stringify(result))
-                },
-                error: function (jqXHR, testStatus, errorThrown) {
-                    $('#response').html(JSON.stringify(jqXHR))
-                }
-
-            });
-        };
-
-        var RestGet = function (id) {
-            $.ajax({
-                type: 'GET',
-                url: service + '/get/' + id,
-                dataType: 'json',
-                accept: 'json',
-                contentType: 'application/json;utf-8',
-                async: false,
-                success: function (result) {
-                    $('#response').html(JSON.stringify(result))
-                },
-                error: function (jqXHR, testStatus, errorThrown) {
-                    $('#response').html(JSON.stringify(jqXHR))
-                }
-
-            });
-        };
-
-        var RestPost = function (name, description) {
-            var JSONObject = {
-                'name': name,
-                'description': description
-            };
-
-            $.ajax({
-                type: 'POST',
-                url: service + '/add',
-                dataType: 'json',
-                data: JSON.stringify(JSONObject),
-                accept: 'json',
-                contentType: 'application/json;utf-8',
-                async: false,
-                success: function (result) {
-                    $('#response').html(JSON.stringify(result))
-                },
-                error: function (jqXHR, testStatus, errorThrown) {
-                    $('#response').html(JSON.stringify(jqXHR))
-                }
-
-            });
-        };
-
-        var RestPut = function (id, name, description) {
-            var JSONObject = {
-                'id': id,
-                'name': name,
-                'description': description
-            };
-
-            $.ajax({
-                type: 'PUT',
-                url: service + '/update',
-                dataType: 'json',
-                data: JSON.stringify(JSONObject),
-                accept: 'json',
-                contentType: 'application/json;utf-8',
-                async: false,
-                success: function (result) {
-                    $('#response').html(JSON.stringify(result))
-                },
-                error: function (jqXHR, testStatus, errorThrown) {
-                    $('#response').html(JSON.stringify(jqXHR))
-                }
-
-            });
-        };
-
-    </script>
     <body>
     <#include "navbar.ftl">
 
